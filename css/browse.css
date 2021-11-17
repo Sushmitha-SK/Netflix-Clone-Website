@@ -1,0 +1,636 @@
+:root {
+    --red: #e50914;
+    --white: #ffffff;
+    --font-size-h1: 60px;
+    --font-size-h2: 24px;
+    --font-size-h3: 20px;
+
+    --gray: #303030;
+    --text-gray: #757575;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    line-height: normal;
+    color: var(--white);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+
+.play-btn {
+    padding: 0.5em 1.25em;
+    min-width: 135px;
+    min-height: 45px;
+    color: black;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.link {
+    min-width: 135px;
+    min-height: 45px;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+.header-top #series-link {
+    padding-left: 15px;
+}
+
+.header-top #films-link {
+    padding-left: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header start */
+header {
+    background: linear-gradient(#000000df, #0000006e, #000000df), url(../images/joker.jpg) no-repeat center center/cover;
+    height: 110vh;
+}
+
+#netflix-icon {
+    width: 180px;
+    height: 42px;
+    fill: var(--red);
+}
+
+.header-top {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    padding: 2em 0;
+}
+
+.header-content {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+#header-content-title {
+    font-size: var(--font-size-h1);
+    line-height: 1em;
+    margin-top: 2.5em;
+    margin-bottom: 0.25em;
+    font-weight: 575;
+}
+
+#header-content-subtitle {
+    font-size: var(--font-size-h2);
+    width: 80%;
+    max-width: 800px;
+    padding: 0.2em;
+    padding-bottom: 1em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.play-btn {
+    color: #000;
+    background-color: #DCDCDC;
+    font-weight: 575;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background: #000000cf;
+    z-index: 1;
+    display: none;
+}
+
+#vid {
+    z-index: 2;
+    width: 800px;
+    height: 600px;
+    position: fixed;
+    top: calc(50% - 300px);
+    left: calc(50% - 400px);
+    display: none;
+}
+
+/* Header end */
+
+/* Movie-cards-container start */
+.movie-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    margin-bottom: 2em;
+}
+
+.movie-card-genre-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.movie-card-genre {
+    display: flex;
+    flex: 1 1 calc(30% - 1rem);
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.genre-title {
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+}
+
+.genre {
+    width: calc(20% - 1rem);
+    min-width: 120px;
+    max-width: 300px;
+    height: 200px;
+}
+
+.Drama1 {
+    background: url(../images/Drama/flight-club.webp) no-repeat center/cover;
+}
+
+.Drama2 {
+    background: url(../images/Drama/kings-speech.webp) no-repeat center/cover;
+}
+
+.Drama3 {
+    background: url(../images/Drama/the-prestige.webp) no-repeat center/cover;
+}
+
+.Drama4 {
+    background: url(../images/Drama/the-revenant.webp) no-repeat center/cover;
+}
+
+.Drama5 {
+    background: url(../images/Drama/the-social-network.webp) no-repeat center/cover;
+}
+
+.Thriller1 {
+    background: url(../images/Thriller/a-quiet-place.webp) no-repeat center/cover;
+}
+
+.Thriller2 {
+    background: url(../images/Thriller/black-swan.webp) no-repeat center/cover;
+}
+
+.Thriller3 {
+    background: url(../images/Thriller/joker.webp) no-repeat center/cover;
+}
+
+.Thriller4 {
+    background: url(../images/Thriller/night-crawler.webp) no-repeat center/cover;
+}
+
+.Thriller5 {
+    background: url(../images/Thriller/the-silence-of-the-lambs.webp) no-repeat center/cover;
+}
+
+.children1 {
+    background: url(../images/Children/despicable.webp) no-repeat center/cover;
+}
+
+.children2 {
+    background: url(../images/Children/frozen.webp) no-repeat center/cover;
+}
+
+.children3 {
+    background: url(../images/Children/hotel-transylvania.webp) no-repeat center/cover;
+}
+
+.children4 {
+    background: url(../images/Children/spirited-away.webp) no-repeat center/cover;
+}
+
+.children5 {
+    background: url(../images/Children/up.webp) no-repeat center/cover;
+}
+
+.Suspense1 {
+    background: url(../images/Suspense/gone-girl.webp) no-repeat center/cover;
+}
+
+.Suspense2 {
+    background: url(../images/Suspense/prisoners.webp) no-repeat center/cover;
+}
+
+.Suspense3 {
+    background: url(../images/Suspense/seven.webp) no-repeat center/cover;
+}
+
+.Suspense4 {
+    background: url(../images/Suspense/shutter-island.webp) no-repeat center/cover;
+}
+
+.Suspense5 {
+    background: url(../images/Suspense/zodiac.webp) no-repeat center/cover;
+}
+
+.Romance1 {
+    background: url(../images/Romance/a-star-is-born.webp) no-repeat center/cover;
+}
+
+.Romance2 {
+    background: url(../images/Romance/blue-valentine.webp) no-repeat center/cover;
+}
+
+.Romance3 {
+    background: url(../images/Romance/la-la-land.webp) no-repeat center/cover;
+}
+
+.Romance4 {
+    background: url(../images/Romance/the-notebook.webp) no-repeat center/cover;
+}
+
+.Romance5 {
+    background: url(../images/Romance/titanic.webp) no-repeat center/cover;
+}
+
+/* Movie-cards-container end */
+
+/* Footer start */
+footer {
+    margin-top: 0.5em;
+    padding: 3em 5em;
+    background-color: black;
+}
+
+.footer-title,
+.footer-title-link {
+    color: var(--text-gray);
+}
+
+.footer-title {
+    margin-bottom: 2em;
+}
+
+.footer-title-link:hover {
+    text-decoration: underline;
+}
+
+.footer-links-container {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-links-container * {
+    text-align: left;
+    color: var(--text-gray);
+}
+
+.footer-body {
+    width: 80%;
+
+    min-width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-list-item {
+    margin-bottom: 1em;
+    padding-right: 0.75em;
+}
+
+.footer-list-item:hover {
+    text-decoration: underline;
+}
+
+/* Footer end */
+
+@media only screen and (max-width: 949px) {
+
+    :root {
+        --font-size-h1: 50px;
+        --font-size-h2: 26px;
+        --font-size-h3: 20px;
+    }
+
+    .link {
+        padding: 0.5em 1em;
+    }
+
+    img {
+        width: 500px;
+    }
+
+    /* Header start */
+    header {
+        height: 110vh;
+    }
+
+    #netflix-icon {
+        width: 108px;
+        height: 32px;
+    }
+
+
+    .header-top {
+        width: 90%;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+
+        padding: 2em 0;
+        padding-top: 1.5em;
+    }
+
+
+    #header-content-title {
+        font-size: var(--font-size-h1);
+        line-height: 1em;
+        margin-top: 3em;
+        margin-bottom: 0.25em;
+    }
+
+    #header-content-subtitle {
+        font-size: var(--font-size-h3);
+        width: 100%;
+        min-width: 450px;
+        padding: 0.2em;
+        padding-bottom: 1em;
+        line-height: 1.5em;
+    }
+
+    .play-btn {
+        color: #000;
+        background-color: white;
+    }
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 350%;
+        display: none;
+    }
+
+    #vid {
+        width: 400px;
+        height: 400px;
+        top: calc(50% - 200px);
+        left: calc(50% - 200px);
+    }
+
+    /* Header end */
+    /* Movie-cards-container start */
+    .movie-cards-container {
+        gap: 2em;
+    }
+
+    .movie-card-genre-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .movie-card-genre {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .genre-title {
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+    }
+
+    .genre {
+        width: calc(30% - 1rem);
+        min-width: 120px;
+        height: 200px;
+    }
+
+    /* Movie-cards-container end */
+    /* Footer start */
+    footer {
+        margin-top: 0.5em;
+        padding: 3em 5em;
+        background-color: black;
+    }
+
+    .footer-title {
+        margin-bottom: 1.5em;
+    }
+
+    .footer-body {
+        justify-content: space-between;
+    }
+
+    .footer-list-item {
+        margin-bottom: 1em;
+        padding-right: 0.75em;
+    }
+
+    /* Footer end */
+}
+
+@media (max-width:706px) {
+
+    /* Movie-cards-container start */
+    .movie-cards-container {
+        gap: 1.5em;
+    }
+
+    .movie-card-genre-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .movie-card-genre {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .genre-title {
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+    }
+
+    .genre {
+        width: calc(45% - 1rem);
+        min-width: 0;
+        height: 200px;
+    }
+
+    /* Movie-cards-container end */
+    .footer-body {
+        width: 80%;
+
+        min-width: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:502px) {
+    :root {
+        --font-size-h1: 40px;
+        --font-size-h2: 24px;
+        --font-size-h3: 20px;
+    }
+
+    .link {
+        padding: 0.5em 1em;
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    #netflix-icon {
+        width: 108px;
+        height: 32px;
+    }
+
+
+    .header-top {
+        width: 90%;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+
+        padding: 2em 0;
+        padding-top: 1.5em;
+    }
+
+
+    #header-content-title {
+        font-size: var(--font-size-h1);
+        line-height: 1em;
+        margin-top: 2em;
+        margin-bottom: 0.25em;
+    }
+
+    #header-content-subtitle {
+        font-size: var(--font-size-h3);
+        width: 90%;
+        min-width: 200px;
+        padding: 0.2em;
+        padding-bottom: 1em;
+        line-height: 1em;
+    }
+
+    .play-btn {
+        color: #000;
+        background-color: white;
+    }
+
+    #overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 350%;
+        z-index: 1;
+        display: none;
+    }
+
+    #vid {
+        width: 100%;
+        height: 400px;
+        position: fixed;
+        top: calc(50% - 200px);
+        left: 0;
+        display: none;
+    }
+
+    /* Header end */
+    /* Movie-cards-container start */
+    .movie-cards-container {
+        gap: 2em;
+    }
+
+    .movie-card-genre-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .movie-card-genre {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .genre-title {
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+    }
+
+    .genre {
+        width: calc(50% - 1rem);
+        min-width: 0;
+        height: 200px;
+    }
+
+    /* Movie-cards-container end */
+
+    /* Footer start */
+    footer {
+        margin-top: 0.5em;
+        padding: 3em 0.5em;
+        background-color: black;
+
+
+    }
+
+
+
+    .footer-title {
+        margin-bottom: 1.5em;
+    }
+
+    .footer-body {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .footer-list-item {
+        margin-bottom: 1em;
+        padding-right: 0.75em;
+    }
+
+    /* Footer end */
+
+}
+
+/* Media Queries end */
