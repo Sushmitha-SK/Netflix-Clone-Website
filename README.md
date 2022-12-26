@@ -1,3 +1,3 @@
 # Netflix-Clone-Website
 
-Click here to view: https://netflix-clone-responsive.herokuapp.com/
+Click here to view: https://netflix-clone-website-demo-app.vercel.app/
